@@ -21,6 +21,10 @@ scripts:
     run: dart run package_rename
     description: rename the app.
 
+  run_dev:
+    run: flutter run
+    description: run the app in dev mode.
+
   build_data:
     run: dart pub global run melos exec --fail-fast --scope="*data*" --depends-on="build_runner" "flutter packages pub run build_runner build"
     description: build_runner build data module.
@@ -131,26 +135,6 @@ scripts:
   format:
     run: melos exec --fail-fast --flutter -- "find . -name "*.dart" ! -name "*.g.dart" ! -name "*.freezed.dart" ! -name "*.gr.dart" ! -name "*.config.dart" ! -name "*.mocks.dart" ! -name "*.mapper.dart" ! -path '*/generated/*' ! -path '*/.dart_tool/*' | tr '\n' ' ' | xargs dart format --set-exit-if-changed -l 100"
     description: Run format.
-
-  metrics:
-    run: dart pub global run melos exec --flutter -- "flutter pub run dart_code_metrics:metrics analyze lib"
-    description: Run metrics.
-
-  metrics_app:
-    run: dart pub global run melos exec --scope="*app*" --flutter -- "flutter pub run dart_code_metrics:metrics analyze lib"
-    description: Run metrics app.
-
-  metrics_data:
-    run: dart pub global run melos exec --scope="*data*" --flutter -- "flutter pub run dart_code_metrics:metrics analyze lib"
-    description: Run metrics data.
-
-  metrics_domain:
-    run: dart pub global run melos exec --scope="*domain*" --flutter -- "flutter pub run dart_code_metrics:metrics analyze lib"
-    description: Run metrics domain.
-
-  metrics_shared:
-    run: dart pub global run melos exec --scope="*shared*" --flutter -- "flutter pub run dart_code_metrics:metrics analyze lib"
-    description: Run metrics shared.
     
   analyze:
     run: dart pub global run melos exec --flutter -- "flutter analyze --no-pub --suppress-analytics"
@@ -173,7 +157,7 @@ scripts:
     description: Run analyze shared.
 
   lint:
-    run: dart pub global run melos run analyze && dart pub global run melos run metrics
+    run: dart pub global run melos run analyze
     description: Run metrics and analyze.
 
   format_lint:
@@ -183,10 +167,6 @@ scripts:
   test_coverage:
     run: dart pub global run melos exec --fail-fast --dir-exists="test" "flutter test --coverage && lcov --remove coverage/lcov.info '**/*.freezed.dart' '**/*.g.dart' '**/*.graphql.dart' '**/*.part.dart' '**/*.config.dart' '**/*_event.dart' '**/*_state.dart' '**/generated/*' '**/routes/*' '**/l10n/*' '**/config/*' '**/di/*' -o coverage/lcov.info && genhtml coverage/lcov.info --output=coverage && open coverage/index.html"
     description: Run test coverage.
-
-  check_unused_files:
-    run: dart pub global run melos exec "flutter pub run dart_code_metrics:metrics check-unused-files lib"
-    description: Run check unused files.
 
   pub_get_data:
     run: dart pub global run melos exec --fail-fast --scope="*data*" "flutter pub get"
@@ -203,11 +183,3 @@ scripts:
   pub_get_shared:
     run: dart pub global run melos exec --fail-fast --scope="*shared*" "flutter pub get"
     description: pub get shared module.
-
-  check_unused_l10n_app:
-    run: dart pub global run melos exec --fail-fast --scope="*app*" "flutter pub run dart_code_metrics:metrics check-unused-l10n lib -p ^S$"
-    description: check unused l10n app.
-
-  check_unused_l10n_domain:
-    run: dart pub global run melos exec --fail-fast --scope="*domain*" "flutter pub run dart_code_metrics:metrics check-unused-l10n lib -p ^S$"
-    description: check unused l10n domain.

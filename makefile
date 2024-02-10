@@ -1,10 +1,8 @@
 ifeq ($(OS),Windows_NT)
     BUILD_CMD=.\build_and_run_app.bat
-    METRICS_CMD=.\tools\dart_code_metrics.bat
     COMMIT_CHECK_CMD=.\tools\check_commit_message.bat
 else
     BUILD_CMD=./build_and_run_app.sh
-    METRICS_CMD=./tools/dart_code_metrics.sh
     COMMIT_CHECK_CMD=./tools/check_commit_message.sh
 endif
 
@@ -61,21 +59,6 @@ analyze_shared:
 
 lint:
 	@melos run lint
-
-metrics:
-	@melos run metrics
-
-metrics_app:
-	@melos run metrics_app
-
-metrics_data:
-	@melos run metrics_data
-
-metrics_domain:
-	@melos run metrics_domain
-
-metrics_shared:
-	@melos run metrics_shared
 
 format_lint:
 	@melos run format_lint
@@ -201,9 +184,6 @@ pub_get_app:
 pub_get_shared:
 	@melos run pub_get_shared
 
-dart_code_metrics:
-	$(METRICS_CMD)
-
 check_commit_message:
 	$(COMMIT_CHECK_CMD) "$(shell git log --format=%B -n 1 --no-merges $(BITBUCKET_COMMIT))"
 
@@ -223,6 +203,9 @@ pub_upgrade:
 
 rename:
 	cd app && dart run package_rename
+
+run_dev:
+	cd app && flutter run
 
 dart_fix:
 	dart fix --apply
