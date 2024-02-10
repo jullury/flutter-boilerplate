@@ -35,6 +35,7 @@ dependencies:
   shared:
     path: ../shared
   tuple: 2.0.2
+
 dev_dependencies:
   auto_route_generator: 7.3.2
   bloc_test: 9.1.3
@@ -53,6 +54,7 @@ dev_dependencies:
   mocktail: 0.3.0
   nals_lints:
     path: ../nals_lints
+  package_rename: ^1.5.3
 
 # Config generate when build
 flutter_gen:
@@ -87,3 +89,6 @@ flutter:
 #          weight: 700
 #        - asset: assets/fonts/Muli-Regular.ttf
 #          weight: 400
+
+scripts:
+  rename: dart run package_rename

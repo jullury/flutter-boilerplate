@@ -218,5 +218,11 @@ pub_sync:
 	cd tools && ./sync_all_pub_versions.sh
 	melos bootstrap
 
+pub_upgrade:
+	melos update_all
+
+rename:
+	cd app && dart run package_rename
+
 dart_fix:
 	dart fix --apply

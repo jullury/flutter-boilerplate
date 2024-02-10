@@ -4,4 +4,10 @@ environment:
   sdk: '>=3.0.5 <4.0.0'
 
 dev_dependencies:
+  commitlint_cli: ^0.7.1
+  husky: ^0.1.7
   melos: 3.1.0
+  xml: ^6.5.0
+
+scripts:
+  gen_env: dart run tools/gen_env/lib/main.dart
