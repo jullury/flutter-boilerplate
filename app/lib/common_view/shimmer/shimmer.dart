@@ -7,15 +7,15 @@ class Shimmer extends StatefulWidget {
   });
 
   final Widget? child;
-  static _ShimmerState? of(BuildContext context) {
-    return context.findAncestorStateOfType<_ShimmerState>();
+  static ShimmerState? of(BuildContext context) {
+    return context.findAncestorStateOfType<ShimmerState>();
   }
 
   @override
-  _ShimmerState createState() => _ShimmerState();
+  ShimmerState createState() => ShimmerState();
 }
 
-class _ShimmerState extends State<Shimmer> with SingleTickerProviderStateMixin {
+class ShimmerState extends State<Shimmer> with SingleTickerProviderStateMixin {
   late AnimationController _shimmerController;
 
   static const _shimmerGradient = LinearGradient(

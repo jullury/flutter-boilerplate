@@ -90,3 +90,20 @@ type Query {
   pokemons(first: Int!): [Pokemon]
   pokemon(id: String, name: String): Pokemon
 }
+
+query get_pokedex {
+  pokemons(first: 151) {
+    name
+    image
+    maxHP
+    maxCP
+    weight {
+      minimum
+      maximum
+    }
+    height {
+      minimum
+      maximum
+    }
+  }
+}

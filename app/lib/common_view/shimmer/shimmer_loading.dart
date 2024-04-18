@@ -15,10 +15,10 @@ class ShimmerLoading extends StatefulWidget {
   final bool isLoading;
 
   @override
-  _ShimmerLoadingState createState() => _ShimmerLoadingState();
+  ShimmerLoadingState createState() => ShimmerLoadingState();
 }
 
-class _ShimmerLoadingState extends State<ShimmerLoading> {
+class ShimmerLoadingState extends State<ShimmerLoading> {
   Listenable? _shimmerChanges;
 
   @override

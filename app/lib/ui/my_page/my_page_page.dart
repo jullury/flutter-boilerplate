@@ -50,9 +50,9 @@ class _MyPagePageState extends BasePageState<MyPagePage, MyPageBloc> {
                       style: AppTextStyles.s14w400Primary(),
                     ),
                     tileColor: AppColors.current.primaryColor,
-                    value: state.languageCode == LanguageCode.ja,
-                    onChanged: (isJa) => appBloc.add(
-                      AppLanguageChanged(languageCode: isJa ? LanguageCode.ja : LanguageCode.en),
+                    value: false,
+                    onChanged: (value) => appBloc.add(
+                      const AppLanguageChanged(languageCode: LanguageCode.en),
                     ),
                   );
                 },

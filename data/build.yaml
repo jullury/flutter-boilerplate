@@ -1,19 +1,14 @@
 targets:
   $default:
-    sources:
-      - lib/**
-      - graphql/**
     builders:
-      artemis:
+      ferry_generator|graphql_builder:
+        enabled: true
         options:
-          generate_helpers: true
-
-          schema_mapping:
-            - schema: graphql/schema.graphql
-              queries_glob: graphql/pokedex.graphql
-              output: lib/src/repository/source/api/model/generated/pokedex_graphql.dart
-          
-          scalar_mapping:
-            - graphql_type: DateTime
-              dart_type: DateTime
-              use_custom_parser: true
+          schema: data|lib/schema.graphql
+          when_extensions:
+            when: true
+            maybeWhen: true
+      ferry_generator|serializer_builder:
+        enabled: true
+        options:
+          schema: data|lib/schema.graphql

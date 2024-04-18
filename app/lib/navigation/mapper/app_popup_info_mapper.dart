@@ -9,8 +9,8 @@ import '../../app.dart';
 @LazySingleton(as: BasePopupInfoMapper)
 class AppPopupInfoMapper extends BasePopupInfoMapper {
   @override
-  Widget map(AppPopupInfo appPopupInfo, AppNavigator navigator) {
-    return appPopupInfo.when(
+  Widget map(AppPopupInfo appRouteInfo, AppNavigator navigator) {
+    return appRouteInfo.when(
       confirmDialog: (message, onPressed) {
         return CommonDialog(
           actions: [

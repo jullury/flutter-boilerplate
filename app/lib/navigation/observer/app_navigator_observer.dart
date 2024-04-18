@@ -38,13 +38,13 @@ class AppNavigatorObserver extends NavigatorObserver with LogMixin {
     }
   }
 
-  @override
-  void didStartUserGesture(Route<dynamic> route, Route<dynamic>? previousRoute) {
-    super.didStartUserGesture(route, previousRoute);
-  }
+  // @override
+  // void didStartUserGesture(Route<dynamic> route, Route<dynamic>? previousRoute) {
+  //   super.didStartUserGesture(route, previousRoute);
+  // }
 
-  @override
-  void didStopUserGesture() {
-    super.didStopUserGesture();
-  }
+  // @override
+  // void didStopUserGesture() {
+  //   super.didStopUserGesture();
+  // }
 }
