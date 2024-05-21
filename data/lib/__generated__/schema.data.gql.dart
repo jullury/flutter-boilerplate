@@ -9,37 +9,45 @@ import 'package:data/__generated__/serializers.gql.dart' as _i1;
 
 part 'schema.data.gql.g.dart';
 
-abstract class Gget_pokedexData implements Built<Gget_pokedexData, Gget_pokedexDataBuilder> {
+abstract class Gget_pokedexData
+    implements Built<Gget_pokedexData, Gget_pokedexDataBuilder> {
   Gget_pokedexData._();
 
-  factory Gget_pokedexData([Function(Gget_pokedexDataBuilder b) updates]) = _$Gget_pokedexData;
+  factory Gget_pokedexData([Function(Gget_pokedexDataBuilder b) updates]) =
+      _$Gget_pokedexData;
 
-  static void _initializeBuilder(Gget_pokedexDataBuilder b) => b..G__typename = 'Query';
+  static void _initializeBuilder(Gget_pokedexDataBuilder b) =>
+      b..G__typename = 'Query';
 
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   BuiltList<Gget_pokedexData_pokemons>? get pokemons;
-  static Serializer<Gget_pokedexData> get serializer => _$ggetPokedexDataSerializer;
+  static Serializer<Gget_pokedexData> get serializer =>
+      _$ggetPokedexDataSerializer;
 
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         Gget_pokedexData.serializer,
         this,
       ) as Map<String, dynamic>);
 
-  static Gget_pokedexData? fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+  static Gget_pokedexData? fromJson(Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
         Gget_pokedexData.serializer,
         json,
       );
 }
 
 abstract class Gget_pokedexData_pokemons
-    implements Built<Gget_pokedexData_pokemons, Gget_pokedexData_pokemonsBuilder> {
+    implements
+        Built<Gget_pokedexData_pokemons, Gget_pokedexData_pokemonsBuilder> {
   Gget_pokedexData_pokemons._();
 
-  factory Gget_pokedexData_pokemons([Function(Gget_pokedexData_pokemonsBuilder b) updates]) =
+  factory Gget_pokedexData_pokemons(
+          [Function(Gget_pokedexData_pokemonsBuilder b) updates]) =
       _$Gget_pokedexData_pokemons;
 
-  static void _initializeBuilder(Gget_pokedexData_pokemonsBuilder b) => b..G__typename = 'Pokemon';
+  static void _initializeBuilder(Gget_pokedexData_pokemonsBuilder b) =>
+      b..G__typename = 'Pokemon';
 
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -65,7 +73,9 @@ abstract class Gget_pokedexData_pokemons
 }
 
 abstract class Gget_pokedexData_pokemons_weight
-    implements Built<Gget_pokedexData_pokemons_weight, Gget_pokedexData_pokemons_weightBuilder> {
+    implements
+        Built<Gget_pokedexData_pokemons_weight,
+            Gget_pokedexData_pokemons_weightBuilder> {
   Gget_pokedexData_pokemons_weight._();
 
   factory Gget_pokedexData_pokemons_weight(
@@ -87,7 +97,8 @@ abstract class Gget_pokedexData_pokemons_weight
         this,
       ) as Map<String, dynamic>);
 
-  static Gget_pokedexData_pokemons_weight? fromJson(Map<String, dynamic> json) =>
+  static Gget_pokedexData_pokemons_weight? fromJson(
+          Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         Gget_pokedexData_pokemons_weight.serializer,
         json,
@@ -95,7 +106,9 @@ abstract class Gget_pokedexData_pokemons_weight
 }
 
 abstract class Gget_pokedexData_pokemons_height
-    implements Built<Gget_pokedexData_pokemons_height, Gget_pokedexData_pokemons_heightBuilder> {
+    implements
+        Built<Gget_pokedexData_pokemons_height,
+            Gget_pokedexData_pokemons_heightBuilder> {
   Gget_pokedexData_pokemons_height._();
 
   factory Gget_pokedexData_pokemons_height(
@@ -117,7 +130,8 @@ abstract class Gget_pokedexData_pokemons_height
         this,
       ) as Map<String, dynamic>);
 
-  static Gget_pokedexData_pokemons_height? fromJson(Map<String, dynamic> json) =>
+  static Gget_pokedexData_pokemons_height? fromJson(
+          Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         Gget_pokedexData_pokemons_height.serializer,
         json,

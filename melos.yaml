@@ -8,6 +8,9 @@ command:
     runPubGetInParallel: false
 
 scripts:
+  pub_get_all:
+    run: dart pub global run melos exec "flutter packages pub get"
+    description: flutter pub get all modules.
   # build runner build
   build_all:
     run: dart pub global run melos exec --depends-on="build_runner" "flutter packages pub run build_runner build"

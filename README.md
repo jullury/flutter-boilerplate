@@ -23,7 +23,7 @@ Flutter project using clean architecture and bloc pattern.
 1. Navigation: [auto_route](https://pub.dev/packages/auto_route)
 1. DI: [get_it](https://pub.dev/packages/get_it), [injectable](https://pub.dev/packages/injectable)
 1. REST API: [dio](https://pub.dev/packages/dio)
-1. GraphQL: [artemis](https://pub.dev/packages/artemis), [graphql_flutter](https://pub.dev/packages/graphql_flutter)
+1. GraphQL: [ferry](https://pub.dev/packages/ferry), [graphql_flutter](https://pub.dev/packages/graphql_flutter)
 1. Database: [objectbox](https://pub.dev/packages/objectbox)
 1. Shared Preferences: [encrypted_shared_preferences](https://pub.dev/packages/encrypted_shared_preferences)
 1. Data class: [freezed](https://pub.dev/packages/freezed)

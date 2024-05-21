@@ -19,7 +19,8 @@ abstract class Gget_pokedexReq
         _i1.OperationRequest<_i2.Gget_pokedexData, _i3.Gget_pokedexVars> {
   Gget_pokedexReq._();
 
-  factory Gget_pokedexReq([Function(Gget_pokedexReqBuilder b) updates]) = _$Gget_pokedexReq;
+  factory Gget_pokedexReq([Function(Gget_pokedexReqBuilder b) updates]) =
+      _$Gget_pokedexReq;
 
   static void _initializeBuilder(Gget_pokedexReqBuilder b) => b
     ..operation = _i4.Operation(
@@ -57,16 +58,19 @@ abstract class Gget_pokedexReq
   @override
   bool get executeOnListen;
   @override
-  _i2.Gget_pokedexData? parseData(Map<String, dynamic> json) => _i2.Gget_pokedexData.fromJson(json);
+  _i2.Gget_pokedexData? parseData(Map<String, dynamic> json) =>
+      _i2.Gget_pokedexData.fromJson(json);
 
-  static Serializer<Gget_pokedexReq> get serializer => _$ggetPokedexReqSerializer;
+  static Serializer<Gget_pokedexReq> get serializer =>
+      _$ggetPokedexReqSerializer;
 
   Map<String, dynamic> toJson() => (_i6.serializers.serializeWith(
         Gget_pokedexReq.serializer,
         this,
       ) as Map<String, dynamic>);
 
-  static Gget_pokedexReq? fromJson(Map<String, dynamic> json) => _i6.serializers.deserializeWith(
+  static Gget_pokedexReq? fromJson(Map<String, dynamic> json) =>
+      _i6.serializers.deserializeWith(
         Gget_pokedexReq.serializer,
         json,
       );

@@ -5,10 +5,10 @@ publish_to: none
 
 environment:
   sdk: ">=3.0.5 <4.0.0"
-  flutter: ">=1.17.0"
+  flutter: ">=3.0.0"
 
 dependency_overrides:
-  analyzer: 6.2.0
+  analyzer: 6.5.0
 
 dependencies:
   async: 2.11.0
@@ -30,8 +30,8 @@ dependencies:
   graphql_flutter: 5.1.2
   injectable: 2.1.2
   json_annotation: 4.8.1
-  objectbox: 2.1.0
-  objectbox_flutter_libs: 2.1.0
+  objectbox: ^4.0.0
+  objectbox_flutter_libs: ^4.0.0
   path_provider: 2.0.15
   rxdart: 0.27.7
   shared:
@@ -53,7 +53,7 @@ dev_dependencies:
   mocktail: 0.3.0
   nals_lints:
     path: ../nals_lints
-  objectbox_generator: 2.1.0
+  objectbox_generator: ^4.0.0
 
 objectbox:
   output_dir: src/repository/source/database/generated
